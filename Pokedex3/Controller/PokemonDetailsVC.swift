@@ -28,13 +28,19 @@ class PokemonDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = selectedPokemon.name
-        // Do any additional setup after loading the view.
+        
+        selectedPokemon.downloadDetails {
+            self.updateUI()
+        }
     }
 
     @IBAction func goBack(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    func updateUI() {
+        
+    }
     
 
 }
