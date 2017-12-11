@@ -39,6 +39,15 @@ class PokemonDetailsVC: UIViewController {
     }
     
     func updateUI() {
+        pokeAttack.text = "\(selectedPokemon.attack)"
+        pokeDefense.text = "\(selectedPokemon.defense!)"
+        pokeHeight.text = "\(selectedPokemon.height!)"
+        pokeWidth.text = "\(selectedPokemon.weight!)"
+        pokeType.text = selectedPokemon.type
+        pokeId.text = "\(selectedPokemon.pokedexId)"
+        pokeImage.image = UIImage(named: pokeId.text!)
+        currentEvolution.image = UIImage(named: pokeId.text!)
+        
         
     }
     
